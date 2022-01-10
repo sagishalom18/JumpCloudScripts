@@ -28,6 +28,7 @@ Get-ChildItem -Path $Source -Include '*.ttf','*.ttc','*.otf' -Recurse | ForEach 
         $Destination.CopyHere($Font,0x14)
 
         # Delete temporary copy of font
+        Remove-Item $Font -Force
        
     }
 }
